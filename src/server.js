@@ -37,5 +37,5 @@ app.use((req, res) => {
 });
 
 app.listen(process.env.API_PORT, () => {
-  console.log(`ABEX API running in ${process.env.API_PORT}`);
+  console.log(`LOJA API running in ${process.env.API_PORT}`);
 });
