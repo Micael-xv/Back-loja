@@ -110,7 +110,7 @@ const persist = async (req, res) => {
 
 const destroy = async (req, res) => {
   try {
-    const id = req.body.id ? req.body.id.toString().replace(/\D/g, '') : null;
+    const id = req.params.id ? req.params.id.toString().replace(/\D/g, '') : null;
     if (!id) {
       return res.status(200).send({
         type: 'error',
@@ -147,7 +147,7 @@ const destroy = async (req, res) => {
 const register = async (req, res) => {
   try {
     const {
-      username, name, phone, password, role, cpf, email,
+      username, cpf, name, phone, password, email, role,
     } = req.body;
 
     const existingUser = await User.findOne({
@@ -164,8 +164,8 @@ const register = async (req, res) => {
       username,
       name,
       phone,
-      passwordHash,
       role,
+      passwordHash,
       cpf,
       email,
     });

@@ -30,11 +30,11 @@ const User = sequelize.define(
     passwordHash: {
       field: 'password_hash',
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     token: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     role: {
       type: DataTypes.STRING(255),
@@ -51,16 +51,6 @@ const User = sequelize.define(
     },
     recuperation: {
       type: DataTypes.STRING(255),
-    },
-    createdAt: {
-      type: DataTypes.DATE,
-      field: 'created_at',
-      allowNull: false,
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      field: 'updated_at',
-      allowNull: false,
     },
   },
   {
