@@ -22,7 +22,7 @@ const get = async (req, res) => {
     if (!response) {
       return res.status(200).send({
         type: 'error',
-        message: `Nenhum registro com id ${id}`,
+        message: `Nenhum registro com ID ${id}`,
         data: [],
       });
     }
