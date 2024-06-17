@@ -1,5 +1,5 @@
-/node_modules
-package-lock.json
-# .env
-access.log
 public/
+# .env
+package-lock.json
+/node_modules
+access.log
