@@ -8,3 +8,5 @@ export default (app) => {
   app.get('/payments', payments.get);
   app.get('/payments/:id', payments.get);
 };
+
+
